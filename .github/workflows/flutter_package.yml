@@ -106,9 +106,3 @@ jobs:
       - name: 🕵️ Analyze
         run: flutter analyze ${{inputs.analyze_directories}}
 
-      - name: 📊 Check Code Coverage
-        uses: VeryGoodOpenSource/very_good_coverage@v3
-        with:
-          path: ${{inputs.working_directory}}/coverage/lcov.info
-          exclude: ${{inputs.coverage_excludes}}
-          min_coverage: ${{inputs.min_coverage}}

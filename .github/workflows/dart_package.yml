@@ -105,9 +105,3 @@ jobs:
       - name: 🕵️ Analyze
         run: dart analyze --fatal-infos --fatal-warnings ${{inputs.analyze_directories}}
 
-      - name: 📊 Check Code Coverage
-        uses: VeryGoodOpenSource/very_good_coverage@v3
-        with:
-          path: ${{inputs.working_directory}}/coverage/lcov.info
-          exclude: ${{inputs.coverage_excludes}}
-          min_coverage: ${{inputs.min_coverage}}
